@@ -1,0 +1,6 @@
+.colorPicker {
+    -fx-background-color: white;
+    -fx-border-width: 1.5;
+    -fx-border-color: #d3d3d3;
+    -fx-border-radius: 3;
+}

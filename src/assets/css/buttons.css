@@ -1,0 +1,35 @@
+.button {
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+    -fx-border-color: gray;
+    -fx-background-size: 80%;
+    -fx-background-position: center;
+    -fx-border-width: 1;
+    -fx-border-radius: 2;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+.button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#clearButton {
+    -fx-background-image: url('/assets/icons/trash_white.png');
+}
+
+#clearButton:pressed {
+    -fx-background-image: url('/assets/icons/trash_black.png');
+}
+
+#sendButton{
+    -fx-background-size: 70%;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-border-color: transparent;
+    -fx-background-image: url('/assets/icons/arrow_white.png');
+}
+#sendButton:hover{
+    -fx-background-image: url('/assets/icons/arrow_black.png');
+}

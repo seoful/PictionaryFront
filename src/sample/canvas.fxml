@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="900.0" prefHeight="746.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <AnchorPane fx:id="canvasBox" layoutX="30.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" styleClass="canvas" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="32.0">
+      <Canvas fx:id="downCanvas" height="592.0" width="592.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Canvas>
+      <Canvas fx:id="upperCanvas" height="592.0" width="592.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Canvas>
+   </AnchorPane>
+   <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="32.0" layoutY="648.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="600.0" spacing="16.0">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <AnchorPane fx:id="previewBox" cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="true" prefHeight="64.0" prefWidth="64.0" styleClass="canvas">
+         <Canvas fx:id="previewCanvas" height="64.0" width="64.0" />
+      </AnchorPane>
+      <ColorPicker fx:id="colorPicker" style="-fx-border-radius: 3;" styleClass="colorPicker" />
+      <Slider fx:id="sizeSlider" max="30.0" maxWidth="100.0" min="5.0" prefHeight="10.0" prefWidth="100.0" value="1.0" />
+      <RadioButton id="brushButton" fx:id="brushButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" selected="true">
+         <toggleGroup>
+            <ToggleGroup fx:id="tool" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton id="eraserButton" fx:id="eraserButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" toggleGroup="$tool" />
+      <Button id="clearButton" fx:id="clearButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" />
+   </HBox>
+   <VBox layoutX="664.0" prefWidth="293.0" spacing="8.0" AnchorPane.topAnchor="32.0">
+      <children>
+         <ScrollPane fx:id="scoreContainer" fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="294.0" styleClass="borders">
+            <content>
+               <VBox fx:id="scoreBox" alignment="TOP_CENTER" prefWidth="281.0">
+                  <children>
+                     <Label text="ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff" wrapText="true" VBox.vgrow="ALWAYS">
+                        <padding>
+                           <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                        </padding>
+                     </Label>
+                  </children>
+               </VBox>
+            </content>
+            <padding>
+               <Insets bottom="4.0" top="4.0" />
+            </padding>
+         </ScrollPane>
+         <ScrollPane fx:id="chatContainer" fitToWidth="true" hbarPolicy="NEVER" prefHeight="392.0" prefWidth="299.0" styleClass="borders">
+            <content>
+               <VBox fx:id="chatBox" alignment="BOTTOM_CENTER" prefWidth="294.0">
+                  <children>
+                     <Label maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefWidth="215.0" text="Start guessing" wrapText="true">
+                        <padding>
+                           <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                        </padding>
+                     </Label>
+                  </children>
+               </VBox>
+            </content>
+            <VBox.margin>
+               <Insets bottom="8.0" />
+            </VBox.margin>
+            <padding>
+               <Insets bottom="4.0" top="4.0" />
+            </padding>
+         </ScrollPane>
+         <AnchorPane>
+            <children>
+               <TextField fx:id="textField" prefWidth="299.0" promptText="Send your answer">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </TextField>
+               <Button id="sendButton" fx:id="sendButton" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="264.0" layoutY="1.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="34.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            </children>
+         </AnchorPane>
+      </children>
+   </VBox>
+   <stylesheets>
+      <URL value="@../assets/css/buttons.css" />
+      <URL value="@../assets/css/canvas.css" />
+      <URL value="@../assets/css/color-picker.css" />
+      <URL value="@../assets/css/radio-buttons.css" />
+      <URL value="@../assets/css/label.css" />
+      <URL value="@../assets/css/chat.css" />
+   </stylesheets>
+</AnchorPane>

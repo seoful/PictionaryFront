@@ -1,0 +1,17 @@
+.text-field{
+    -fx-background-color: white;
+    -fx-border-width: 2;
+    -fx-border-color: gray;
+    -fx-border-radius: 5
+}
+.borders{
+    -fx-border-width: 2;
+    -fx-border-color: gray;
+    -fx-border-radius: 5;
+    -fx-background-color: transparent;
+}
+
+.message{
+    -fx-padding: 8;
+    -fx-wrap-text: true;
+}
